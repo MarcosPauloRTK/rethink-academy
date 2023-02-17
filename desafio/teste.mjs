@@ -3,6 +3,7 @@ import * as data from "./data.mjs"
 //Objeto para auxiliar na tradução
 const types_en2pt = {
   plant: "planta",
+  grass: "planta",
   fire: "fogo",
   water: "agua",
   bug: "inseto",
