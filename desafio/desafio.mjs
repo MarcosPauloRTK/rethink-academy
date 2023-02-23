@@ -1,7 +1,7 @@
 import * as data from "./data.mjs";
 
 //Objeto para auxiliar na tradução
-const types_en2pt = {
+const TYPES_EN2PT = {
   plant: "planta",
   grass: "planta",
   fire: "fogo",
@@ -24,22 +24,27 @@ const types_en2pt = {
 };
 
 //Procura por tipo
-const find_by_type = (type) => data.pokemons.filter((x) => x.type == type);
+let findByType = (...types) => data.pokemons.filter(pokemon => types.every(x => pokemon.type.includes(x)));
 // console.log(find_by_type("psychic"));
+
 //Procura por nome
-const find_by_name = (name) => data.pokemons.filter((x) => x.name == name);
+let findByName = (name) => data.pokemons.filter((x) => x.name == name);
 // console.log(find_by_name("charmander"));
 
 //Traduz os tipos
-const translate_type = () =>
+let translateType = () =>
   data.pokemons.forEach((pokemon) => {
     pokemon.type = pokemon.type
-      .map((tipo) => types_en2pt[tipo])
+      .map((tipo) => TYPES_EN2PT[tipo])
       .reduce((acc, item) => {
         acc.push(item);
         return acc;
       }, []);
   });
-
 // translate_type();
-// console.log(data.pokemons);
+// console.log(find_by_type("eletrico", "metalico"));
+
+data.pokemons.find_by_name = findByName;
+data.pokemons.find_by_type = findByType;
+data.pokemons.translate_type = translateType;
+
