@@ -8,3 +8,7 @@ class Produto {
 
 const produto_1 = new Produto("Arroz", 12)
 const produto_2 = new Produto("Feijão", 10, 0.2)
+
+type asd = (number, string) => string;
+
+

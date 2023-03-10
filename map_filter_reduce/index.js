@@ -66,6 +66,8 @@ console.log(shoppingSpree); // 227005
     ["Young", 0],
   ];
 
+  
+
   const countDict = voters.reduce((acc, curr) => {
     // ageGroup.find(*) procura o grupo etário da pessoa
     // comparando com sua idade e depois é jogado dentrode uma
