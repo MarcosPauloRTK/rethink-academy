@@ -1,7 +1,7 @@
 // Questão 1
 
 // Questão 2
-const stringConcat = (array) =>
+const stringArrayConcatenator = (array) =>
   array.reduce((acc, item) => acc + `${item}`, "");
 // console.log(stringConcat([1,2,3]));
 
@@ -68,7 +68,7 @@ console.log(shoppingSpree); // 227005
 
   
 
-  const countDict = voters.reduce((acc, curr) => {
+  const votersByAge = voters.reduce((acc, curr) => {
     // ageGroup.find(*) procura o grupo etário da pessoa
     // comparando com sua idade e depois é jogado dentrode uma
     //  format string para gerar a chave do dicionário.
@@ -77,7 +77,7 @@ console.log(shoppingSpree); // 227005
     return acc;
   }, {});
 
-  const countVotersDict = voters
+  const votersWhoVotedByAge = voters
     .filter((el) => el.voted)
     .reduce((acc, curr) => {
       const key = `num${ageGroup.find((el) => curr.age > el[1])[0]}VotedPeople`;
@@ -85,7 +85,7 @@ console.log(shoppingSpree); // 227005
       return acc;
     }, {});
 
-  const votersResult = { ...countDict, ...countVotersDict }; // seu código aqui
+  const votersResult = { ...votersByAge, ...votersWhoVotedByAge }; // seu código aqui
 
   console.log(votersResult);
 }

@@ -1,4 +1,4 @@
-import * as data from "./data";
+import {pokemons} from "./data";
 
 //Objeto para auxiliar na tradução
 const typesEnglishToPortuguese: { [key: string]: string } = {
@@ -36,18 +36,18 @@ type Pokemon = {
 
 //Procura por tipo
 let findByType = (...types: string[]) =>
-  data.pokemons.filter((pokemon:Pokemon) =>
+  pokemons.filter((pokemon:Pokemon) =>
     types.every((x) => pokemon.type.includes(x))
   );
 // console.log(findByType("psychic"));
 
 //Procura por nome
-let findByName = (name: string) => data.pokemons.filter((x) => x.name == name);
+let findByName = (name: string) => pokemons.filter((x) => x.name == name);
 // console.log(findByName("charmander"));
 
 //Traduz os tipos
 let translateType = () =>
-  data.pokemons.forEach((pokemon: Pokemon) => {
+  pokemons.forEach((pokemon: Pokemon) => {
     pokemon.type = pokemon.type
       .map((tipo: string) => typesEnglishToPortuguese[tipo])
       .reduce((acc: string[], item: string) => {
