@@ -13,3 +13,4 @@ const pathToFile = path.join(__dirname, "dados.txt");
 readFilePromise(pathToFile)
   .then(console.log)
   .catch((err) => console.log("deu ruim"));
+  

@@ -1,0 +1,20 @@
+{
+  "name": "rethink-academy",
+  "version": "1.0.0",
+  "description": "Repositório contendo os códigos desenvolvidos para estudo de JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "desafio.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://MarcosPauloRTK@github.com/MarcosPauloRTK/rethink-academy.git"
+  },
+  "author": "Marcos Paulo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcosPauloRTK/rethink-academy/issues"
+  },
+  "homepage": "https://github.com/MarcosPauloRTK/rethink-academy#readme"
+}
