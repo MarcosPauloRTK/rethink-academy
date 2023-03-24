@@ -35,7 +35,7 @@ type Pokemon = {
 
 
 //Procura por tipo
-let findByType = (...types: string[]) =>
+let findByType = (...types: string[]) : Pokemon[]=>
   pokemons.filter((pokemon:Pokemon) =>
     types.every((x) => pokemon.type.includes(x))
   );
@@ -58,3 +58,7 @@ let translateType = () =>
 
 // translateType();
 // console.log(findByType("eletrico", "metalico"));
+
+const types = Object.keys(typesEnglishToPortuguese)
+
+export {findByType, types, Pokemon}
